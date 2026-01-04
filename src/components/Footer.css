@@ -1,0 +1,137 @@
+/*  FOOTER WRAPPER */
+.footer {
+  width: 100%;
+  background: #ffffff;
+  padding: 40px 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/*  BLUE CONTAINER  */
+.footer-box {
+  max-width: 1440px;
+  margin: auto;
+  background: #3a53a4;
+  border-radius: 20px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.5fr;
+  column-gap: 40px;
+  align-items: center;       
+}
+
+
+
+
+/* LEFT */
+.footer-left {
+  color: #fff;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-logo {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  width: 60px;
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.footer-left hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*SOCIAL*/
+.follow-us p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons span {
+  width: 41px;
+  height: 41px;
+  background: #ffffff;
+  color: #3a53a4;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* CENTER LINKS */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* MAP  */
+.footer-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+}
+
+.footer-map img {
+  width: 535px;             
+  height: 311px;            
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 4px 34px rgba(0, 0, 0, 0.35);
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  max-width: 1440px;
+  margin: 16px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: #555;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,82 @@
+/* ===== HIGHLIGHTS SECTION ===== */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 60px 40px;
+
+  align-items: stretch;      
+}
+
+
+.highlight-card {
+  background-color: #ffffff;
+  padding: 28px 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+  flex-direction: column;
+  height: 100%;              /* ⭐ CRITICAL LINE */
+
+  background-color: #ffffff;
+  padding: 28px 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+.highlight-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f57c00; /* orange heading */
+  margin-bottom: 12px;
+}
+
+
+.highlight-card p {
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+.highlight-card span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #3f51b5;
+  cursor: pointer;
+}
+
+.highlight-card span:hover {
+  text-decoration: underline;
+}
+
+.Know {
+  margin-top: auto;   
+  font-size: 13px;
+  font-weight: 500;
+  color: #3f51b5;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1024px) {
+  .highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .highlights {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+}

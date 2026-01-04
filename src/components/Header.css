@@ -1,0 +1,117 @@
+/* ===== HEADER WRAPPER ===== */
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ===== LOGO SECTION ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.logo h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f57c00; /* orange title */
+  line-height: 1.2;
+}
+
+.logo p {
+  font-size: 13px;
+  color: #3f51b5; /* blue subtitle */
+}
+
+/* ===== NAVIGATION ===== */
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header nav a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #525252;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  transition: width 0.3s ease;
+}
+
+
+.header nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== ACTIVE LINK (optional) ===== */
+.header nav a.active {
+  color: #525252;
+  font-weight: 700;
+  color: #525252;
+}
+
+.header nav a.active::after {
+  width: 100%;
+}
+
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .header {
+    padding: 12px 20px;
+  }
+
+  .header nav {
+    gap: 18px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}

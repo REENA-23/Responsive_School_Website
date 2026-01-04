@@ -1,0 +1,39 @@
+.about-intro {
+  width: 100%;
+  padding: 80px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+}
+
+/* Orange small line */
+.about-line {
+  width: 30px;
+  height: 3px;
+  background-color: #f7931e;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+/* Title */
+.about-title {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #3d53a3; /* Main blue */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+.about-text {
+  max-width: 1184px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: #444444;
+}

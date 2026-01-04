@@ -1,0 +1,97 @@
+/* ===== SECTION ===== */
+.principal-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 80px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== CONTAINER ===== */
+.principal-container {
+  max-width: 1274px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  animation: slideInBottom 10s ease-out forwards
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* ===== IMAGE SIDE ===== */
+.principal-image-wrapper {
+  flex: 0 0 415px;
+  display: flex;
+  justify-content: center;
+}
+
+.principal-image-border {
+  width: 415px;
+  height: 415px;
+  border: 1.5px dashed #3d53a3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.principal-image {
+  width: 383px;
+  height: 383px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== CONTENT SIDE ===== */
+.principal-content {
+  flex: 1;
+}
+
+/* small orange dash */
+.principal-tag {
+  display: inline-block;
+  width: 22px;
+  height: 3px;
+  background: #f0942a;
+  margin-bottom: 12px;
+}
+
+/* title */
+.principal-title {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #3d53a3;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* paragraph */
+.principal-text {
+  max-width: 595px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 2%;
+  color: #525252;
+  margin-bottom: 16px;
+}
+
+/* signature */
+.principal-sign {
+  max-width: 595px;
+  text-align: right;
+  font-size: 15px;
+  font-weight: 600;
+  color: #f0942a;
+}
