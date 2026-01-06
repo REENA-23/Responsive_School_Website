@@ -1,10 +1,10 @@
-import Header1 from "../component2/Header1";
-import AboutSchool from "../components/AboutSchool";
-import Footer from "../components/Footer";
-import HeadLine from "../component6/HeadLine";
-import SubmitApplication from "../component6/SubmitApplication";
-import WhyUs from "../component6/WhyUs";
-import SchoolTimings from "../component6/SchoolTimings";
+import Header1 from "../aboutus/Header1";
+import AboutSchool from "../Home/AboutSchool";
+import Footer from "../Home/Footer";
+import HeadLine from "../admission/HeadLine";
+import SubmitApplication from "../admission/SubmitApplication";
+import WhyUs from "../admission/WhyUs";
+import SchoolTimings from "../admission/SchoolTimings";
 
 const Admission = () => {
   return <>

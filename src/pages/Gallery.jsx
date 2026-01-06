@@ -1,9 +1,9 @@
-import Header1 from "../component2/Header1";
-import AboutSchool from "../components/AboutSchool";
-import Footer from "../components/Footer";
-import GalleryHero from "../component5/GalleryHero";
-import FilterTabs from "../component5/FilterTabs";
-import AnnualFunction from "../component5/AnnualFunction";
+import Header1 from "../aboutus/Header1";
+import AboutSchool from "../Home/AboutSchool";
+import Footer from "../Home/Footer";
+import GalleryHero from "../gallery/GalleryHero";
+import FilterTabs from "../gallery/FilterTabs";
+import AnnualFunction from "../gallery/AnnualFunction";
 
 const Gallery = () => {
   return <>

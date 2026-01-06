@@ -1,8 +1,8 @@
-import Header1 from "../component2/Header1";
-import Footer from "../components/Footer";
-import ContactHero from "../component7/CotactHero";
-import Text from "../component7/Text";
-import ContactSection from "../component7/ContactSection";
+import Header1 from "../aboutus/Header1";
+import Footer from "../Home/Footer";
+import ContactHero from "../contact/CotactHero";
+import Text from "../contact/Text";
+import ContactSection from "../contact/ContactSection";
 
 
 const Contact = () => {

@@ -1,14 +1,14 @@
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Highlights from "../components/Highlights";
-import LifeAtSchool from "../components/LifeAtSchool";
-import SchoolCampus from "../components/SchoolCampus";
-import StudentLife from "../components/StudentLife";
-import Achievements from "../components/Achievements";
-import Gallery from "../components/Gallery";
-import Testimonials from "../components/Testimonials";
-import AboutSchool from "../components/AboutSchool";
-import Footer from "../components/Footer";
+import Header from "../Home/Header";
+import Hero from "../Home/Hero";
+import Highlights from "../Home/Highlights";
+import LifeAtSchool from "../Home/LifeAtSchool";
+import SchoolCampus from "../Home/SchoolCampus";
+import StudentLife from "../Home/StudentLife";
+import Achievements from "../Home/Achievements";
+import Gallery from "../Home/Gallery";
+import Parent from "../aboutus/Parent";
+import AboutSchool from "../Home/AboutSchool";
+import Footer from "../Home/Footer";
 
 
 function Home() {
@@ -22,7 +22,7 @@ function Home() {
       <StudentLife />
       <Achievements />
       <Gallery/>
-      <Testimonials/>
+      <Parent/>
       <AboutSchool/>
       <Footer/>
     </>

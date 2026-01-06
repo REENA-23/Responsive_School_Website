@@ -1,15 +1,15 @@
-import Header1 from "../component2/Header1";
-import Footer from "../components/Footer";
-import AboutSchool from "../components/AboutSchool"
-import PageHero from "../component2/PageHero";
-import AboutIntro from "../component2/AboutIntro";
-import MissionVision from "../component2/MissionVision";
-import SchoolCampus from "../components/SchoolCampus";
-import OurPillars from "../component2/OurPillars";
-import OurTrusty from "../component2/OurTrusty";
-import OurTeam from "../component2/OurTeam";
-import MessageFromPrincipal from "../component2/MessageFromPrincipal";
-import Parent from "../component2/Parent";
+import Header1 from "../aboutus/Header1";
+import Footer from "../Home/Footer";
+import AboutSchool from "../Home/AboutSchool"
+import PageHero from "../aboutus/PageHero";
+import AboutIntro from "../aboutus/AboutIntro";
+import MissionVision from "../aboutus/MissionVision";
+import SchoolCampus from "../Home/SchoolCampus";
+import OurPillars from "../aboutus/OurPillars";
+import OurTrusty from "../aboutus/OurTrusty";
+import OurTeam from "../aboutus/OurTeam";
+import MessageFromPrincipal from "../aboutus/MessageFromPrincipal";
+import Parent from "../aboutus/Parent";
 
 
 function About() {

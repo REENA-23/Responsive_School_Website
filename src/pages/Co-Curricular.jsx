@@ -1,10 +1,10 @@
-import Header1 from "../component2/Header1";
-import AboutSchool from "../components/AboutSchool";
-import Footer from "../components/Footer";
-import CoCurricularHero from "../component4/CoCurricular";
-import CAS from "../component3/CAS";
-import Inclusive from "../component3/InclusiveDevelopment";
-import AdmissionCTA from "../component4/AdmissionCTA";
+import Header1 from "../aboutus/Header1";
+import AboutSchool from "../Home/AboutSchool";
+import Footer from "../Home/Footer";
+import CoCurricularHero from "../cocurricular/CoCurricular";
+import CAS from "../acedemic/CAS";
+import Inclusive from "../acedemic/InclusiveDevelopment";
+import AdmissionCTA from "../cocurricular/AdmissionCTA";
 
 
 const CoCurricular = () => {
