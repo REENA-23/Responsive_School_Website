@@ -1,7 +1,7 @@
 const Achievements = () => {
   return (
     <section className="w-full bg-white overflow-visible">
-      {/* ===== BLUE SECTION ===== */}
+      {/*  BLUE SECTION  */}
       <div
         className="
           bg-[#3D53A3]
@@ -57,7 +57,7 @@ const Achievements = () => {
         </div>
       </div>
 
-      {/* ===== MOBILE / TABLET CARD ===== */}
+      {/*  MOBILE / TABLET CARD */}
       <div
         className="
           block lg:hidden
@@ -81,7 +81,7 @@ const Achievements = () => {
 
 export default Achievements;
 
-/* ===== REUSABLE CARD (NO LAYOUT CHANGE) ===== */
+/*  REUSABLE CARD  */
 const AchievementCard = () => {
   const stats = [
     { value: "60.91%", width: "61%", color: "bg-[#2fa46c]" },
