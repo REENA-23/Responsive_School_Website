@@ -24,9 +24,11 @@ const AboutSchool = () => {
       {/* CONTENT WRAPPER */}
       <div
         className="
-          max-w-[900px]
+          w-[92%]
+          sm:w-[88%]
+          md:w-[80%]
+          lg:w-[900px]   /* desktop locked */
           mx-auto
-          px-4 sm:px-6 md:px-10 lg:px-16
           py-14 sm:py-16 md:py-20
           text-center
         "
@@ -35,7 +37,7 @@ const AboutSchool = () => {
         <span
           className={`
             block
-            w-7
+            w-[28px]
             h-[3px]
             bg-[#f39a2b]
             mx-auto

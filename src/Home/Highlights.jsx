@@ -24,11 +24,15 @@ const highlightsData = [
 const Highlights = () => {
   return (
     <section className="w-full bg-white">
+      {/* % BASED CONTAINER */}
       <div
         className="
-          max-w-[1274px]
+          w-[92%]
+          sm:w-[90%]
+          md:w-[90%]
+          lg:w-[88%]
+          xl:w-[85%]
           mx-auto
-          px-4 sm:px-6 md:px-10 lg:px-16
           py-10 sm:py-14 md:py-16
         "
       >
@@ -50,6 +54,7 @@ const Highlights = () => {
                 rounded-xl
                 shadow-[0_8px_25px_rgba(0,0,0,0.08)]
                 flex flex-col
+                min-h-[220px]
                 transition-all duration-300
                 hover:-translate-y-1.5
                 hover:shadow-[0_12px_35px_rgba(0,0,0,0.12)]

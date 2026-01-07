@@ -1,18 +1,8 @@
 const StudentLife = () => {
   return (
-    <section className="bg-white px-[60px] py-[80px] max-[768px]:px-[20px]">
-      {/* ===== MOBILE TITLE ONLY ===== */}
-      <div className="md:hidden text-center mb-[30px]">
-        <div className="flex items-center justify-center gap-[10px] mb-[10px]">
-          <span className="w-[18px] h-[2px] bg-[#f0942a]"></span>
-          <h2 className="text-[18px] font-bold text-[#3d53a3] tracking-[1px]">
-            STUDENT LIFE
-          </h2>
-        </div>
-      </div>
-
-      {/* ===== DESKTOP TITLE ONLY (UNCHANGED) ===== */}
-      <div className="hidden md:flex items-center justify-center gap-[10px] mb-[40px]">
+    <section className="bg-white px-[60px] py-[80px]">
+      {/* SECTION TITLE */}
+      <div className="flex items-center justify-center gap-[10px] mb-[40px]">
         <span className="w-[18px] h-[2px] bg-[#f0942a]"></span>
         <h2 className="text-[18px] font-bold text-[#3d53a3] tracking-[1px]">
           STUDENT LIFE

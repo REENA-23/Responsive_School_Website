@@ -10,48 +10,62 @@ import {
 const Footer = () => {
   return (
     <footer className="w-full bg-white font-['Poppins']">
-      {/* BLUE CONTAINER */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-10">
+      {/* OUTER WRAPPER */}
+      <div className="w-full px-[2%] py-[10px]">
+        {/* BLUE CARD */}
         <div
           className="
+            w-full
             bg-[#3a53a4]
-            rounded-2xl
-            p-6 sm:p-8 md:p-10
+            rounded-[20px]
+            px-[40px]
+            py-[35px]
             grid
             grid-cols-1
-            md:grid-cols-2
-            lg:grid-cols-3
-            gap-8
+            lg:grid-cols-[1.3fr_1fr_1.6fr]
+            gap-[40px]
             items-start
           "
         >
-          {/* LEFT SECTION */}
+          {/* LEFT : LOGO + SOCIAL */}
           <div className="text-white">
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
+            <div className="flex items-center gap-[16px]">
+              <div className="w-[80px] h-[80px] bg-white rounded-[12px] flex items-center justify-center">
                 <img
                   src="/image_home/Logo.png"
                   alt="School Logo"
-                  className="w-12"
+                  className="w-[60px]"
                 />
               </div>
 
-              <h3 className="text-lg sm:text-xl font-semibold leading-snug">
+              <h3 className="text-[20px] leading-[30px] font-semibold">
                 Shree <br />
                 B.P. Davda <br />
                 Sarasvati Vidyalay
               </h3>
             </div>
 
-            <div className="my-6 border-t border-white/30" />
+            <div className="my-[20px] border-t border-white/30 w-[90%]" />
 
-            <p className="text-sm mb-3">Follow us</p>
-            <div className="flex gap-3">
+            <p className="text-[14px] mb-[10px]">Follow us</p>
+
+            <div className="flex gap-[10px]">
               {[faInstagram, faFacebookF, faGoogle, faXTwitter].map(
                 (icon, i) => (
                   <span
                     key={i}
-                    className="w-10 h-10 bg-white text-[#3a53a4] rounded-full grid place-items-center cursor-pointer"
+                    className="
+                      w-[38px]
+                      h-[38px]
+                      bg-white
+                      text-[#3a53a4]
+                      rounded-full
+                      grid
+                      place-items-center
+                      cursor-pointer
+                      hover:scale-105
+                      transition
+                    "
                   >
                     <FontAwesomeIcon icon={icon} />
                   </span>
@@ -60,11 +74,12 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* CENTER LINKS */}
-          <div className="flex flex-col gap-3 text-white md:pl-6 md:border-l md:border-white/30">
+          {/* CENTER : LINKS */}
+          <div className="text-white flex flex-col gap-[10px] lg:pl-[30px] lg:border-l lg:border-white/30">
             {[
               ["About Us", "/about"],
               ["Academic Culture", "/academic"],
+              ["School Culture", "/school"],
               ["Co-Curricular", "/co-curricular"],
               ["Gallery", "/gallery"],
               ["Admission", "/admission"],
@@ -73,24 +88,24 @@ const Footer = () => {
               <Link
                 key={label}
                 to={link}
-                className="text-sm hover:underline"
+                className="text-[14px] hover:underline"
               >
                 {label}
               </Link>
             ))}
           </div>
 
-          {/* RIGHT MAP (HIDDEN ON MOBILE) */}
-          <div className="hidden lg:flex justify-center">
+          {/* RIGHT : MAP (DESKTOP ONLY) */}
+          <div className="hidden lg:flex justify-end">
             <img
               src="/image_home/map.png"
-              alt="School Location Map"
+              alt="School Location"
               className="
                 w-full
-                max-w-md
-                aspect-[16/9]
-                rounded-xl
+                max-w-[535px]
+                h-[310px]
                 object-cover
+                rounded-[14px]
                 shadow-[0_4px_34px_rgba(0,0,0,0.35)]
               "
             />
@@ -100,14 +115,13 @@ const Footer = () => {
         {/* BOTTOM BAR */}
         <div
           className="
-            mt-6
-            text-xs
+            mt-[18px]
+            text-[12px]
             text-[#555]
             flex
             flex-col
-            sm:flex-row
-            gap-2
-            sm:gap-4
+            md:flex-row
+            gap-[8px]
             justify-between
             items-center
             text-center
@@ -117,7 +131,7 @@ const Footer = () => {
 
           <p>Design and Develop by PRUTHATEK</p>
 
-          <p className="flex gap-2">
+          <p className="flex gap-[6px]">
             <Link to="/privacy" className="hover:underline">
               Privacy Policy
             </Link>

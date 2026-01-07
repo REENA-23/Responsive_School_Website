@@ -1,10 +1,34 @@
 import { useEffect, useRef, useState } from "react";
 
 const cards = [
-  { title: "Sports", img: "/image_home/sports.png", shape: "top" },
-  { title: "Social Welfare", img: "/image_home/music.png", shape: "top" },
-  { title: "Activities", img: "/image_home/music.png", shape: "bottom" },
-  { title: "InterSchool Activities", img: "/image_home/pool.png", shape: "bottom" },
+  {
+    title: "Sports",
+    img: "/image_home/sports.png",
+    imgW: "273px",
+    imgH: "191px",
+    shape: "top",
+  },
+  {
+    title: "Social Welfare",
+    img: "/image_home/music.png",
+    imgW: "273px",
+    imgH: "191px",
+    shape: "top",
+  },
+  {
+    title: "Sports",
+    img: "/image_home/music.png",
+    imgW: "273px",
+    imgH: "180px",
+    shape: "bottom",
+  },
+  {
+    title: "InterSchool Activities",
+    img: "/image_home/pool.png",
+    imgW: "273px",
+    imgH: "180px",
+    shape: "bottom",
+  },
 ];
 
 const LifeAtSchool = () => {
@@ -19,7 +43,7 @@ const LifeAtSchool = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.3 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -27,125 +51,100 @@ const LifeAtSchool = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-white">
-      <div
-        className="
-          max-w-[1274px]
-          mx-auto
-          px-4 sm:px-6 md:px-10 lg:px-16
-          py-12 sm:py-16 md:py-20
-        "
-      >
-        {/* ===== MOBILE TITLE ONLY ===== */}
-        <div className="md:hidden text-center mb-10">
-          <span className="inline-block w-[28px] h-[3px] bg-[#f57c00] mb-3 rounded-full" />
-          <h2 className="text-2xl font-bold text-[#3d53a3]">LIFE AT</h2>
-          <p className="text-base text-[#222] mt-2">
-            Shree B.P. Davda Sarasvati Vidyalay
-          </p>
-        </div>
+    <section
+      ref={sectionRef}
+      className="bg-white py-[80px] px-[60px] max-[1024px]:px-[20px]"
+    >
+      <div className="max-w-[1272px] mx-auto flex gap-[40px] max-[1024px]:flex-col">
 
-        {/* ===== MAIN CONTENT ===== */}
-        <div className="flex flex-col lg:flex-row gap-12">
-          {/* LEFT – CARDS */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 flex-1 justify-items-center">
-            {cards.map((item, index) => (
+        {/* LEFT – CARD GRID */}
+        <div className="grid grid-cols-2 gap-[30px] max-[768px]:grid-cols-1">
+          {cards.map((card, index) => {
+            const animateClass =
+              animate && index === 0
+                ? "animate-life-up"
+                : animate && index === 3
+                ? "animate-life-down"
+                : "";
+
+            return (
               <div
                 key={index}
                 className={`
-                  w-full max-w-[330px]
-                  border-2 border-[#4b61d1]
-                  p-5 text-center
-                  ${
-                    item.shape === "top"
-                      ? "rounded-tl-[180px] rounded-tr-[180px] rounded-bl-[20px] rounded-br-[20px]"
-                      : "rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[180px] rounded-br-[180px]"
-                  }
-                  ${
-                    animate
-                      ? item.shape === "top"
-                        ? "animate-life-up"
-                        : "animate-life-down"
-                      : "opacity-100"
-                  }
+                  w-[330px] h-[379px]
+                  border border-[#3D53A3]
+                  p-[18px] box-border
+                  flex flex-col
+                  ${card.shape === "top"
+                    ? "rounded-t-[180px] rounded-b-[10px]"
+                    : "rounded-b-[180px] rounded-t-[10px]"}
+                  ${animateClass}
                 `}
               >
                 {/* IMAGE */}
-                <div
+                <img
+                  src={card.img}
+                  alt={card.title}
+                  style={{ width: card.imgW, height: card.imgH }}
                   className={`
-                    relative w-full aspect-[4/3] overflow-hidden mb-4
-                    ${
-                      item.shape === "top"
-                        ? "rounded-tl-[160px] rounded-tr-[160px] rounded-bl-[20px] rounded-br-[20px]"
-                        : "rounded-[20px]"
-                    }
+                    mx-auto object-cover
+                    ${card.shape === "top"
+                      ? "rounded-t-[180px] rounded-b-[6px]"
+                      : "rounded-[10px]"}
                   `}
-                >
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </div>
+                />
 
-                <h4 className="text-[#f57c00] text-sm mb-2">
-                  {item.title}
+                {/* TITLE */}
+                <h4 className="text-center text-[#f0942a] font-semibold text-[14px] mt-[12px]">
+                  {card.title}
                 </h4>
 
-                <p className="text-xs sm:text-sm text-[#555] leading-relaxed">
+                {/* PARAGRAPH – INSIDE BOX */}
+                <p className="text-center text-[13px] leading-[20px] text-[#6b6b6b] mt-[10px] px-[4px]">
                   Nurture each student to reach his or her fullest potential in
-                  a caring and inspiring environment.
+                  Nurture each student to reach his or her fullest reach
+                  potential.
                 </p>
               </div>
-            ))}
-          </div>
+            );
+          })}
+        </div>
 
-          {/* RIGHT – CONTENT BOX */}
-          <div className="flex-1">
-            {/* ===== DESKTOP TITLE ONLY (UNCHANGED POSITION) ===== */}
-            <div className="hidden md:block mb-6">
-              <span className="inline-block w-[28px] h-[3px] bg-[#f57c00] mb-3 rounded-full" />
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#3d53a3]">
-                LIFE AT
-              </h2>
-              <p className="text-base sm:text-lg text-[#222] mt-2">
-                Shree B.P. Davda Sarasvati Vidyalay
-              </p>
+        {/* RIGHT – CONTENT (CENTERED, NO ANIMATION) */}
+        <div className="flex-1 flex items-center max-[1024px]:items-start">
+          <div className="w-full">
+            <span className="block w-[20px] h-[2px] bg-[#f0942a] mb-[10px]" />
+
+            <h2 className="text-[20px] font-bold text-[#3D53A3]">
+              LIFE AT
+            </h2>
+
+            <h3 className="text-[16px] text-[#444] mt-[4px]">
+              Shree B.P. Davda Sarasvati Vidyalay
+            </h3>
+
+            <p className="text-[14px] leading-[24px] text-[#777] mt-[14px]">
+              Nurture each student to reach his or her fullest potential in
+              Nurture each student to reach his or her fullest potential in
+              Nurture each student to reach his.
+            </p>
+
+            <div className="mt-[20px] rounded-[16px] overflow-hidden">
+              <img
+                src="/image_home/group.png"
+                alt="Group"
+                className="w-full h-auto object-cover"
+              />
             </div>
 
-            <div
-              className="
-                bg-[#f9fafc]
-                rounded-2xl
-                p-6 sm:p-8
-                shadow-[0_8px_25px_rgba(0,0,0,0.06)]
-              "
-            >
-              <p className="text-sm sm:text-base text-[#666] leading-relaxed mb-6">
-                We believe every child holds the potential to shine. Our mission
-                is to guide them with knowledge, discipline, and compassion.
-                We create an environment where students grow academically,
-                socially, and emotionally.
-              </p>
-
-              {/* IMAGE */}
-              <div className="rounded-xl overflow-hidden mb-4">
-                <img
-                  src="/image_home/group.png"
-                  alt="Students Group"
-                  className="w-full"
-                />
-              </div>
-
-              {/* DOTS */}
-              <div className="flex justify-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#f57c00]" />
-                <span className="w-2 h-2 rounded-full bg-[#ccc]" />
-                <span className="w-2 h-2 rounded-full bg-[#ccc]" />
-              </div>
+            <div className="flex gap-[8px] mt-[14px] justify-center">
+              <span className="w-[8px] h-[8px] bg-[#f0942a] rounded-full" />
+              <span className="w-[8px] h-[8px] bg-[#d9d9d9] rounded-full" />
+              <span className="w-[8px] h-[8px] bg-[#d9d9d9] rounded-full" />
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

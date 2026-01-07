@@ -21,14 +21,9 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/20" />
 
       {/* CONTENT */}
-      <div
-        className="
-          absolute inset-0
-          flex items-center justify-center
-          text-center
-        "
-      >
-        <div className="max-w-[900px] px-4 sm:px-6 md:px-10 text-white">
+      <div className="absolute inset-0 flex items-center justify-center text-center">
+        {/* % BASED CONTAINER */}
+        <div className="w-[92%] sm:w-[85%] lg:w-[65%] text-white">
           {/* WELCOME TEXT */}
           <span className="block text-xs sm:text-sm tracking-[2px] mb-3">
             WELCOME TO
