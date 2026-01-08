@@ -45,6 +45,12 @@ const AdmissionCTA = () => {
 
         {/* button */}
         <button
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
           className="
             inline-flex
             items-center

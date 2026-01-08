@@ -1,25 +1,25 @@
 const Achievements = () => {
   return (
     <section className="w-full bg-white overflow-visible">
-      {/*  BLUE SECTION  */}
+      {/* BLUE SECTION */}
       <div
         className="
           bg-[#3D53A3]
           w-full
-          md:w-screen
-          md:relative
-          md:left-1/2
-          md:-ml-[50vw]
+          lg:w-screen
+          lg:relative
+          lg:left-1/2
+          lg:-ml-[50vw]
         "
       >
         <div
           className="
-            w-[92%]
-            sm:w-[90%]
-            lg:w-[1200px]     /* DESKTOP SAME AS BEFORE */
+            w-full
+            max-w-[1200px]
             mx-auto
+            px-4 sm:px-6
             pt-[80px]
-            pb-[220px]       /* space for overlapping card */
+            pb-[260px]     /* ⬅️ MORE SPACE FOR CARD */
             relative
           "
         >
@@ -37,13 +37,13 @@ const Achievements = () => {
             </p>
           </div>
 
-          {/* ===== DESKTOP OVERLAPPING CARD ===== */}
+          {/* DESKTOP CARD (UNCHANGED) */}
           <div
             className="
               hidden lg:block
               absolute
               right-0
-              top-[140px]
+              top-[180px]
               w-[754px]
               bg-white
               rounded-[14px]
@@ -57,18 +57,19 @@ const Achievements = () => {
         </div>
       </div>
 
-      {/*  MOBILE / TABLET CARD */}
+      {/* MOBILE / TABLET CARD */}
       <div
         className="
           block lg:hidden
-          w-[92%]
-          sm:w-[90%]
+          w-full
+          max-w-[92%]
           mx-auto
-          -mt-[160px]
+          -mt-[200px]     /* LESS NEGATIVE */
           bg-white
           rounded-[14px]
           shadow-[0_12px_30px_rgba(0,0,0,0.15)]
           p-[28px]
+          pb-[40px]       /* EXTRA BOTTOM SPACE */
           relative
           z-10
         "
@@ -80,6 +81,7 @@ const Achievements = () => {
 };
 
 export default Achievements;
+
 
 /*  REUSABLE CARD  */
 const AchievementCard = () => {
@@ -104,13 +106,13 @@ const AchievementCard = () => {
       {stats.map((stat, index) => (
         <div
           key={index}
-          className="mb-[22px] last:mb-0 px-[2px]" /* tablet safety */
+          className="mb-[26px] last:mb-0 px-[2px]"
         >
           <strong className="block text-[16px] text-[#333] mb-[6px]">
             {stat.value}
           </strong>
 
-          <p className="text-[12px] text-[#666] mb-[10px]">
+          <p className="text-[12px] text-[#666] mb-[12px]">
             Students Scoring 90% And Above
           </p>
 

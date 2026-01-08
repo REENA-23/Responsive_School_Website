@@ -46,6 +46,12 @@ const HeadLine = () => {
 
         {/* Button */}
         <button
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
           className="
             bg-[#f0942a]
             text-white

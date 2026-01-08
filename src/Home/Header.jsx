@@ -17,8 +17,10 @@ const Header = () => {
   return (
     <header className="w-full bg-white sticky top-0 z-[1000] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
       {/* % BASED CONTAINER */}
-      <div className="w-[92%] xl:w-[88%] mx-auto">
+     <div className="w-full xl:w-[100%] mx-auto px-4">
+
         <div className="flex items-center justify-between py-3">
+          
           {/* LOGO */}
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 flex-shrink-0">
@@ -39,8 +41,8 @@ const Header = () => {
             </div>
           </div>
 
-          {/* DESKTOP NAV */}
-          <nav className="hidden md:flex items-center gap-6">
+          {/* DESKTOP NAV (ONLY lg+) */}
+          <nav className="hidden lg:flex items-center gap-6">
             {links.map((item) => (
               <NavLink
                 key={item.label}
@@ -67,10 +69,10 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* HAMBURGER */}
+          {/* HAMBURGER (MOBILE + TABLET) */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden w-10 h-10 grid place-items-center text-[#3f51b5]"
+            className="lg:hidden w-10 h-10 grid place-items-center text-[#3f51b5]"
           >
             <span className="text-2xl leading-none">
               {open ? "✕" : "☰"}
@@ -78,9 +80,9 @@ const Header = () => {
           </button>
         </div>
 
-        {/* MOBILE MENU */}
+        {/* MOBILE / TABLET MENU */}
         {open && (
-          <div className="md:hidden pb-4">
+          <div className="lg:hidden pb-4">
             <nav className="flex flex-col gap-4 border-t pt-4">
               {links.map((item) => (
                 <NavLink

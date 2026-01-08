@@ -31,9 +31,9 @@ const ContactSection = () => {
             </h2>
 
             <p className="text-sm sm:text-base text-[#525252] leading-6 mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Cras posuere purus ut leo iaculis convallis.
-              Nullam fermentum consectetur adipiscing elit.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+              posuere purus ut leo iaculis convallis. Nullam fermentum
+              consectetur adipiscing elit.
             </p>
 
             {/* Email */}
@@ -56,9 +56,7 @@ const ContactSection = () => {
             <div className="flex items-start gap-4 mb-5">
               <FaPhoneAlt className="text-[#3D53A3] text-lg mt-1" />
               <div>
-                <span className="block text-sm text-[#525252]">
-                  Call us
-                </span>
+                <span className="block text-sm text-[#525252]">Call us</span>
                 <a
                   href="tel:+918592969332"
                   className="text-base font-medium text-[#3D53A3]"
@@ -154,6 +152,12 @@ const ContactSection = () => {
 
             {/* Button */}
             <button
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
               type="submit"
               className="
                 mx-auto

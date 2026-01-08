@@ -79,7 +79,6 @@ const Footer = () => {
             {[
               ["About Us", "/about"],
               ["Academic Culture", "/academic"],
-              ["School Culture", "/school"],
               ["Co-Curricular", "/co-curricular"],
               ["Gallery", "/gallery"],
               ["Admission", "/admission"],

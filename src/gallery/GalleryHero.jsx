@@ -21,17 +21,17 @@ const GalleryHero = ({
         className="w-full h-full object-cover brightness-[60%]"
       />
 
-      {/* Overlay for readability */}
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/20"></div>
 
-      {/* Title */}
+      {/* Page Title – positioned like screenshot */}
       <h1
         className="
           absolute
-          inset-0
-          flex
-          items-center
-          justify-center
+          top-[60%]
+          left-1/2
+          -translate-x-1/2
+          -translate-y-1/2
           text-white
           font-bold
           uppercase
@@ -42,6 +42,7 @@ const GalleryHero = ({
           lg:text-4xl
           px-4
           text-center
+          z-10
         "
       >
         {title}

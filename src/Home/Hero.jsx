@@ -46,6 +46,12 @@ const Hero = () => {
 
           {/* BUTTON */}
           <button
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
             className="
               mt-6
               inline-flex items-center justify-center

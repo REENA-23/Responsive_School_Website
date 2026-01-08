@@ -2,11 +2,9 @@ const Gallery = () => {
   return (
     <section className="w-full bg-white pt-[250px]">
       <div className="w-[90%] mx-auto flex flex-col lg:flex-row items-center gap-[70px]">
-
         {/* LEFT – CIRCULAR GALLERY */}
         <div className="w-full lg:w-[45%] flex justify-center">
           <div className="relative w-[420px] h-[420px]">
-
             {/* OUTER DASHED CIRCLE */}
             <div className="absolute inset-0 rounded-full border-[2px] border-dashed border-[#4156a6]" />
 
@@ -59,7 +57,6 @@ const Gallery = () => {
 
         {/* RIGHT – CONTENT */}
         <div className="w-full lg:w-[40%] text-center lg:text-left">
-
           {/* HEADING */}
           <span className="inline-block w-[28px] h-[3px] bg-[#f7941d] mb-[12px] rounded-full" />
           <h2 className="text-[28px] font-bold text-[#4156a6] mb-[18px]">
@@ -79,6 +76,12 @@ const Gallery = () => {
           {/* BUTTON */}
           <div className="relative inline-flex items-center h-[46px] group cursor-pointer overflow-hidden">
             <span
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
               className="
                 absolute left-0
                 w-[46px] h-[46px]
@@ -108,7 +111,6 @@ const Gallery = () => {
             </span>
           </div>
         </div>
-
       </div>
     </section>
   );

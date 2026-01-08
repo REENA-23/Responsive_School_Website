@@ -73,11 +73,18 @@ const AboutSchool = () => {
           Our holistic education nurtures talent, builds confidence, and shapes
           future leaders.
           <br />
-          Take the first step toward a brighter tomorrow—your journey begins here.
+          Take the first step toward a brighter tomorrow—your journey begins
+          here.
         </p>
 
         {/* BUTTON */}
         <button
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
           className={`
             inline-flex
             items-center

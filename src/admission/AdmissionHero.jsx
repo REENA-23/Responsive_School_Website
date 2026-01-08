@@ -1,6 +1,6 @@
-const AcedemicHero = ({
-  title = "Contact Us",
-  image = "/images/Gallery.png",
+const PageHero = ({
+  title = "ADMISSION",
+  image = "/image_about/About.jpg",
 }) => {
   return (
     <section
@@ -14,24 +14,24 @@ const AcedemicHero = ({
         lg:h-[360px]
       "
     >
-      {/* Background Image */}
+      {/* BACKGROUND IMAGE */}
       <img
         src={image}
         alt={title}
         className="w-full h-full object-cover brightness-[60%]"
       />
 
-      {/* Dark overlay */}
+      {/* OVERLAY (optional but professional) */}
       <div className="absolute inset-0 bg-black/20"></div>
 
-      {/* Page Title – positioned like screenshot */}
+      {/* TITLE */}
       <h1
         className="
           absolute
-          top-[60%]
-          left-1/2
-          -translate-x-1/2
-          -translate-y-1/2
+          inset-0
+          flex
+          items-center
+          justify-center
           text-white
           font-bold
           uppercase
@@ -42,7 +42,6 @@ const AcedemicHero = ({
           lg:text-4xl
           px-4
           text-center
-          z-10
         "
       >
         {title}
@@ -51,4 +50,4 @@ const AcedemicHero = ({
   );
 };
 
-export default AcedemicHero;
+export default PageHero;
