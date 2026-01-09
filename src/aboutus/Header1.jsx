@@ -16,7 +16,8 @@ const Header1 = () => {
 
   return (
     <header className="w-full sticky top-0 z-[1000] font-['Inter']">
-      {/*  WHITE TOP BAR */}
+      
+      {/* ===== WHITE TOP BAR (DESKTOP ONLY) ===== */}
       <div className="hidden lg:flex h-[48px] bg-white justify-end items-center px-10">
         <div className="flex gap-5 text-sm text-[#3f51b5]">
           <a href="#" className="font-medium">Admission Form</a>
@@ -24,12 +25,13 @@ const Header1 = () => {
         </div>
       </div>
 
-      {/*BLUE BAR  */}
+      {/* ===== BLUE BAR ===== */}
       <div className="bg-[#3f51b5] w-full">
         <div className="relative mx-auto w-[92%] lg:w-[95%]">
 
-          {/*  MOBILE / iPAD / iPAD MINI HEADER  */}
+          {/* ===== MOBILE / iPAD HEADER ===== */}
           <div className="flex lg:hidden items-center justify-between h-[64px] px-2">
+            
             {/* LOGO */}
             <div className="bg-white rounded-lg p-1 flex items-center justify-center">
               <img
@@ -48,7 +50,7 @@ const Header1 = () => {
             </button>
           </div>
 
-          {/*  DESKTOP FLOATING LOGO  */}
+          {/* ===== DESKTOP FLOATING LOGO ===== */}
           <div className="hidden lg:block absolute left-10 top-[-74px] bg-white border-2 border-white rounded-2xl">
             <img
               src="/image_home/Logo.png"
@@ -57,38 +59,50 @@ const Header1 = () => {
             />
           </div>
 
-          {/* NAVIGATION  */}
-          <nav
-            className={`
-              ${open ? "flex" : "hidden"}
-              lg:flex
-              flex-col lg:flex-row
-              items-center
-              gap-5 lg:gap-16
-              mt-4 lg:mt-0
-              px-4 lg:px-0
-              lg:ml-[220px]
-            `}
-          >
-            {links.map((item) => (
-              <NavLink
-                key={item.label}
-                to={item.to}
-                end={item.end}
-                onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  `text-base transition-colors text-center
-                  ${isActive ? "text-white font-semibold" : "text-[#dfe3ff]"}`
-                }
-              >
-                {item.label}
-              </NavLink>
-            ))}
-          </nav>
+          {/* ===== DESKTOP NAVIGATION (RIGHT SIDE + CENTERED) ===== */}
+          <div className="hidden lg:flex items-center justify-end min-h-[72px] pl-[220px]">
+            <nav className="flex items-center gap-16">
+              {links.map((item) => (
+                <NavLink
+                  key={item.label}
+                  to={item.to}
+                  end={item.end}
+                  className={({ isActive }) =>
+                    `text-base transition-colors
+                    ${isActive ? "text-white font-semibold" : "text-[#dfe3ff]"}`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </nav>
+          </div>
 
-          {/*  DESKTOP LOREM  */}
-          <p className="hidden lg:flex text-sm text-white leading-6 h-10 justify-center items-end underline decoration-overline">
-            “Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit.”
+          {/* ===== MOBILE MENU ===== */}
+          {open && (
+            <div className="lg:hidden pb-4">
+              <nav className="flex flex-col items-center gap-4 pt-4">
+                {links.map((item) => (
+                  <NavLink
+                    key={item.label}
+                    to={item.to}
+                    end={item.end}
+                    onClick={() => setOpen(false)}
+                    className={({ isActive }) =>
+                      `text-base text-center
+                      ${isActive ? "text-white font-semibold" : "text-[#dfe3ff]"}`
+                    }
+                  >
+                    {item.label}
+                  </NavLink>
+                ))}
+              </nav>
+            </div>
+          )}
+
+          {/* DESKTOP LOREM TEXT */}
+          <p className="hidden lg:flex text-sm text-white leading-10 h-10 justify-center items-end overline decoration-overline">
+            “Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit, sed do eiusmod tempor incididunt ut  magna aliqua..”
           </p>
 
         </div>
@@ -98,3 +112,4 @@ const Header1 = () => {
 };
 
 export default Header1;
+
