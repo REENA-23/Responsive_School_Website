@@ -7,7 +7,7 @@ const AnnualFunction = () => {
           max-w-[1263px]
           mx-auto
           px-4 sm:px-6 md:px-10 lg:px-16
-          py-12 sm:py-16 md:py-20
+          py-12 sm:py-16 md:py-6
         "
       >
         <div
