@@ -51,7 +51,7 @@ const Header1 = () => {
           </div>
 
           {/*  DESKTOP FLOATING LOGO  */}
-          <div className="hidden xl:block absolute left-10 top-[-74px] bg-white border-2 border-white rounded-2xl">
+          <div className="hidden xl:block absolute left-10 top-[-50px] bg-white border-2 border-white rounded-2xl">
             <img
               src="/image_home/Logo.png"
               alt="School Logo"
